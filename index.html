@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Proposal</title>
+  <style>body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #ff8adc;
+}
+
+.envelope {
+  position: relative;
+  cursor: pointer;
+}
+
+/* envelope size */
+.back {
+  position: relative;
+  width: 320px;
+  height: 260px;
+  background: #e638ac;
+}
+
+.front {
+  position: absolute;
+  border-right: 165px solid #e638ac;
+  border-top: 130px solid transparent;
+  border-bottom: 130px solid transparent;
+  height: 0;
+  width: 0;
+  top: 0;
+  left: 150px;
+  z-index: 3;
+}
+
+.front:before {
+  content: "";
+  position: absolute;
+  border-left: 165px solid #e638ac;
+  border-top: 130px solid transparent;
+  border-bottom: 130px solid transparent;
+  height: 0;
+  width: 0;
+  top: -130px;
+  left: -150px;
+}
+
+.front:after {
+  content: "";
+  position: absolute;
+  border-bottom: 135px solid #e032a6;
+  border-left: 160px solid transparent;
+  border-right: 160px solid transparent;
+  height: 0;
+  width: 0;
+  top: -5px;
+  left: -150px;
+}
+
+.top {
+  position: absolute;
+  border-top: 135px solid #c72c93;
+  border-left: 160px solid transparent;
+  border-right: 160px solid transparent;
+  height: 0;
+  width: 0;
+  top: 0;
+  transform-origin: top;
+  transition: 0.4s;
+}
+
+.envelope:hover .top {
+  transform: rotateX(160deg);
+}
+
+/* Updated letter size */
+.letter {
+  position: absolute;
+  background: rgb(0, 0, 0);
+  width: 300px;
+  height: 240px;
+  top: 10px;
+  left: 10px;
+  transition: 0.2s;
+}
+
+.envelope:hover .letter {
+  transform: translateY(-120px);
+  z-index: 2;
+}
+
+.text1 {
+  position: absolute;
+  top: -90px; /* Adjusts vertical position */
+  left: 50%;  /* Center horizontally */
+  transform: translateX(-50%);
+  color: rgb(0, 0, 0);
+  font-family: sans-serif;
+  font-size: 16px;
+  white-space: nowrap; /* Ensures text stays in one line */
+}
+
+/*  heart */
+.heart {
+  background-color: red;
+  height: 70px;
+  width: 70px;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  transform: rotate(-45deg);
+  box-shadow: -5px 10px 90px red;
+  animation: Namanpratapp 0.8s linear infinite;
+}
+
+@keyframes Namanpratpp {
+  0% {
+    transform: rotate(-45deg) scale(1.05);
+  }
+  70% {
+    transform: rotate(-45deg) scale(1);
+  }
+  100% {
+    transform: rotate(-45deg) scale(0.8);
+  }
+}
+
+.heart:before {
+  content: "";
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  background-color: red;
+  top: -40px;
+  border-radius: 50px;
+}
+
+.heart:after {
+  content: "";
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  background-color: red;
+  right: -40px;
+  border-radius: 50px;
+}
+
+.text {
+    text-align: center;
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    position: relative;
+    top: -25px;
+    left: 16px;
+  }</style>
+  </head>
+  <body>
+    <div class="envelope">
+      <div class="back"></div>
+      <div class="letter">
+        <div class="heart"></div>
+        <div class="text">
+          <p>❤️<br>
+             From the moment I met you, <br />
+          my world shifted. Every heartbeat<br />
+          has whispered your name and<br />
+         I don’t want a chapter, I want<br>
+        the whole story with you.It's<br>
+        like destiny whispered your<br> name into my soul.<br>
+          🌹Will you be mine?🌹<br>💞
+          </p>
+        </div>
+      </div>
+      <div class="front"></div>
+      <div class="top"></div>
+      <div class="shadow"></div>
+      <div class="text1">
+        <h2><center>Hey! Listen💐 <br>
+          I want to tell you something</center></h2>
+      </div>
+    </div>
+  </body>
+</html>
